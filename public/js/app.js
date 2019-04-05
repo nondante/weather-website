@@ -5,6 +5,20 @@ const messageTwo = document.querySelector('#messageTwo');
 const weather = document.querySelector('#weather');
 const about = document.querySelector('#about');
 const help = document.querySelector('#help');
+const video = document.querySelector('#rainVideo');
+
+//Waiting background video to load
+
+video.addEventListener('loadeddata', function() {
+  showPage()
+}, false);
+
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  $("#main").fadeIn(1000);
+}
+//////////////////////////////
 
 
 weather.className = "underlined";
